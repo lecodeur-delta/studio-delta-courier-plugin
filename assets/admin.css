@@ -1,0 +1,253 @@
+/*
+ * Studio Delta admin console styles. Loaded only on this plugin's own
+ * screens (see SD_Admin_Menu::assets()), and deliberately built on top of
+ * WordPress's own admin classes - .wrap, .widefat, .form-table, .nav-tab -
+ * rather than replacing them, so these pages keep looking like wp-admin
+ * through core updates instead of like a bolted-on app.
+ *
+ * Built by Levi Bugera - Delta Creative Agency - https://www.lecodeur.co.za
+ */
+
+.sd-wrap .sd-title { margin-bottom: 4px; }
+
+.sd-wrap .sd-intro {
+	max-width: 900px;
+	margin: 0 0 12px;
+	color: #50575e;
+	font-size: 13px;
+}
+
+.sd-tabs { margin-bottom: 16px; }
+
+/* --- summary stat strip ------------------------------------------- */
+
+.sd-summary {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin: 0 0 18px;
+}
+
+.sd-stat {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-left: 3px solid #2271b1;
+	border-radius: 3px;
+	padding: 10px 16px;
+	min-width: 150px;
+}
+
+.sd-stat-warn { border-left-color: #b8571e; }
+
+.sd-stat-label {
+	display: block;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: .04em;
+	color: #646970;
+}
+
+.sd-stat-value {
+	display: block;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.3;
+	color: #1d2327;
+}
+
+.sd-stat-big .sd-stat-value { font-size: 30px; }
+
+.sd-stat-link { font-size: 11px; }
+
+/* --- panels ------------------------------------------------------- */
+
+.sd-panel {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+	padding: 4px 20px 16px;
+	margin: 0 0 20px;
+}
+
+.sd-panel h2 { font-size: 14px; }
+
+.sd-panel .form-table th { width: 220px; }
+
+/* --- controls row on Product Rates -------------------------------- */
+
+.sd-controls {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 0 0 10px;
+}
+
+.sd-controls select { max-width: 340px; }
+
+.sd-controls .sd-search-label { margin-left: 12px; }
+
+.sd-controls-note {
+	margin-left: auto;
+	color: #646970;
+	font-size: 12px;
+}
+
+/* --- tables ------------------------------------------------------- */
+
+.sd-rates td, .sd-rates th { vertical-align: middle; }
+
+.sd-num { text-align: right !important; white-space: nowrap; }
+
+.sd-check { text-align: center !important; }
+
+.sd-dims { white-space: nowrap; color: #50575e; font-size: 12px; }
+
+.sd-dim-none { color: #8c8f94; font-style: italic; }
+
+.sd-flag { color: #b8571e; cursor: help; font-weight: 700; }
+
+.sd-expanded > td { background: #f6f7f7; padding: 10px 16px !important; }
+
+.sd-inner { width: 100%; border-collapse: collapse; font-size: 12px; }
+
+.sd-inner th {
+	text-align: left;
+	border-bottom: 1px solid #dcdcde;
+	padding: 4px 8px;
+	color: #646970;
+}
+
+.sd-inner td { padding: 3px 8px; border-bottom: 1px solid #f0f0f1; }
+
+.sd-regions { color: #50575e; font-size: 12px; max-width: 320px; }
+
+.sd-pill {
+	display: inline-block;
+	background: #f0f0f1;
+	border-radius: 3px;
+	padding: 2px 8px;
+	margin: 1px 2px 1px 0;
+	font-size: 11px;
+	color: #3c434a;
+}
+
+/* --- export cards ------------------------------------------------- */
+
+.sd-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 16px;
+	margin-bottom: 20px;
+}
+
+.sd-card {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+	padding: 4px 20px 18px;
+}
+
+.sd-card h2 { font-size: 14px; }
+
+.sd-card p { color: #50575e; font-size: 13px; }
+
+.sd-card-import { grid-column: 1 / -1; }
+
+.sd-rules {
+	margin: 10px 0 0 18px;
+	list-style: disc;
+	color: #50575e;
+	font-size: 12px;
+}
+
+.sd-rules li { margin-bottom: 3px; }
+
+.sd-import-notes {
+	margin: 4px 0 8px 18px;
+	list-style: disc;
+	font-size: 12px;
+}
+
+/* --- misc --------------------------------------------------------- */
+
+.sd-note {
+	color: #646970;
+	font-size: 12px;
+	max-width: 900px;
+}
+
+.sd-warn { color: #b8571e; font-size: 12px; }
+
+.sd-fuel-icon { display: inline-block; line-height: 1; }
+
+.sd-credit {
+	margin: 28px 0 10px;
+	padding-top: 12px;
+	border-top: 1px solid #dcdcde;
+	color: #8c8f94;
+	font-size: 11px;
+}
+
+/* --- Standard Rates toggles in the zone panel --------------------- */
+
+.sd-std-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	margin: 1px 6px 1px 0;
+	cursor: pointer;
+}
+
+.sd-pill-off {
+	opacity: .5;
+	text-decoration: line-through;
+}
+
+/* --- Standard Nationwide price list (v0.7.0) ---------------------- */
+
+.sd-nw-scroll { overflow-x: auto; max-width: 100%; }
+
+.sd-nw-table { min-width: 1280px; }
+.sd-nw-table th, .sd-nw-table td { vertical-align: top; padding: 8px 6px; }
+
+.sd-nw-table .sd-nw-name { width: 210px; }
+.sd-nw-table .sd-nw-name input { display: block; width: 100%; margin: 0 0 4px; }
+.sd-nw-table .sd-nw-match { font-size: 12px; color: #50575e; }
+
+.sd-nw-table .sd-nw-link { width: 200px; }
+
+.sd-nw-table th.sd-nw-price { width: 70px; font-size: 12px; line-height: 1.3; }
+.sd-nw-hint { display: block; font-weight: 400; color: #646970; font-size: 11px; }
+.sd-nw-price-input { width: 66px; text-align: right; }
+.sd-nw-price-input.sd-blank { background: #fcf0e3; border-color: #dba617; }
+
+.sd-nw-table .sd-nw-applies { width: 170px; font-size: 12px; }
+.sd-nw-applies summary { cursor: pointer; color: #2271b1; }
+.sd-nw-applies ul { margin: 6px 0 0; }
+.sd-nw-applies li { margin: 0 0 3px; }
+.sd-nw-how { color: #646970; font-size: 11px; margin-left: 4px; }
+.sd-nw-none { color: #b8571e; font-weight: 600; }
+
+.sd-nw-deleting td { opacity: .45; text-decoration: line-through; }
+
+.sd-nw-reset { margin: -8px 0 20px; }
+.sd-nw-reset-link { color: #b32d2e !important; }
+
+/* --- Checkout Text (v0.7.0) --------------------------------------- */
+
+.sd-text-jump { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 0 0 16px; font-size: 13px; }
+
+.sd-text-table th { width: 260px; }
+.sd-text-optional, .sd-text-changed {
+	display: inline-block;
+	margin: 4px 4px 0 0;
+	padding: 1px 6px;
+	border-radius: 9px;
+	font-size: 11px;
+	font-weight: 400;
+}
+.sd-text-optional { background: #f0f0f1; color: #50575e; }
+.sd-text-changed { background: #e6f1f8; color: #135e96; }
+.sd-text-tokens code { font-size: 11px; }
+.sd-text-default { color: #8c8f94; }
